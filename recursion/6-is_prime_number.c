@@ -17,7 +17,7 @@ int prime_a(int a, int b)
 	{
 		return (1);
 	}
-return (prime_a(a, a + 1));
+	return (prime_a(a, b + 1));
 
 }
 
