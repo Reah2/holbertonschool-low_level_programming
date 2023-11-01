@@ -2,8 +2,8 @@
 
 /**
  * sqrt_a - return the natural square root of a number
- * @n: input number
- * @c: iterator
+ * @a: input number
+ * @b: iterator
  * Return: square root or -1
  */
 
@@ -23,7 +23,7 @@ int sqrt_a(int a, int b)
 /**
  * _sqrt_recursion - returns the natural square roof a number
  * @n: the input number
- * return: natural square root
+ * Return: natural square root
  */
 
 int _sqrt_recursion(int n)
