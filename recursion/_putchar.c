@@ -1,13 +1,16 @@
 #include <unistd.h>
 
-int _putchar(char c) 
-{
-return write(1, &c, 1);
-}
+/**
+ * _putchar - Writes a character to the standard output (usually the terminal).
+ * @c: The character to be written.
+ *
+ * Return: On success, returns the character written as an unsigned char cast to
+ *
+ * an integer. On error, -1 is returned, and errno is set appropriately.
+ */
 
-int main()
+int _putchar(char c)
 {
-char myChar = 'A';
-_putchar(myChar);
-return 0;
+	return write(1, &c, 1);
+
 }
