@@ -1,21 +1,26 @@
 #include "main.h"
 
 /**
- * _strlen - returns the length of a string
+ * stringlength - returns the length of a string
  * @s: string
  * Return: length
  *
  */
 
-int _strlen(char *s)
+int stringlength(char *s)
 {
-int len = 0;
-while (*s != '\0')
-{
-len++;
-s++;
-}
-return (len);
+	int len =0;
+
+	while (*s != '\0')
+
+	{
+		len++;
+
+		s++;
+
+	}
+
+	return (len);
 }
 
 /**
@@ -28,7 +33,7 @@ return (len);
 int idx_num_starts(char *s)
 {
 int i;
-for (i = 0; i < _strlen(s); i++)
+for (i = 0; i < stringlength(s); i++)
 {
 if (s[i] >= '0' && s[i] <= '9')
 return (i);
@@ -73,7 +78,7 @@ if (idx_digit_starts < 0) /* if no digits found, exit program */
 return (0);
 sign = find_sign(s);
 while ((s[idx_digit_starts] >= '0' && s[idx_digit_starts] <= '9')
-&& (idx_digit_starts <= _strlen(s)))
+&& (idx_digit_starts <= stringlength(s)))
 {
 digits_to_print += 1;
 idx_digit_starts++;

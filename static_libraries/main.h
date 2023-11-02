@@ -41,4 +41,8 @@ char *_strpbrk(char *s, char *accept);
 
 char *_strstr(char *haystack, char *needle);
 
+int stringlenght(char *s);
+
+int idx_num_starts(char *s);
+
 #endif
