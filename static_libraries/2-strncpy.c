@@ -1,36 +1,27 @@
 #include "main.h"
 
 /**
- * _strcmp - compare to strings
- *
- * @s1: The string that compares
- *
- * @s2: The string that compares
- *
- * Return: int value
- *
+ * _strncpy - This function will concatenate two stings
+ * @dest: The string that will be modified
+ * @src: The string that will be concatenate to @dest
+ * @n: how much to copy from src to dest
+ * Return: a pointer to dest
  */
 
-int _strcmp(char *s1, char *s2)
+char *_strncpy(char *dest, char *src, int n)
 
 {
 
-	int h;
+	int n01 = 0;
 
-	h = 0;
+	for (n01 = 0; n01 < n && src[n01] != '\0'; n01++)
 
-	while (s1[h] != '\0' && s2[h] != '\0')
+		dest[n01] = src[n01];
 
-	{
+	for ( ; n01 < n ; n01++)
 
-		if (s1[h] != s2[h])
+		dest[n01] = '\0';
 
-			return (s1[h] - s2[h]);
-
-		h++;
-
-	}
-
-	return (s1[h] - s2[h]);
+	return (dest);
 
 }

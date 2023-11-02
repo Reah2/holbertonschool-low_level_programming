@@ -1,26 +1,27 @@
 #include "main.h"
 
 /**
- * _isupper - Function tha checks the upper case of the character
- *
- * @c: Character to be tested
- *
- * Return: 1 if uppercase els 0
- *
+ * _abs - Computes the absolute value for the integer.
+ * @c: The number to be computed
+ * Return: Absolute value for the number or zero
  */
 
-int _isupper(int c)
+int _abs(int c)
 
 {
 
-	if (c >= 65 && c <= 90)
+	if (c < 0)
 
 	{
 
-		return (1);
+		int abs_value;
+
+		abs_value = c * -1;
+
+		return (abs_value);
 
 	}
 
-	return (0);
+	return (c);
 
 }
