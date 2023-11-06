@@ -15,37 +15,33 @@
 
 void simple_print_buffer(char *buffer, unsigned int size)
 {
+
 	unsigned int i;
 
 	i = 0;
 
 	while (i < size)
-
 	{
 
 		if (i % 10)
+		{
 
-				{
+			printf(" ");
+		}
 
-					printf(" ");
+			if (!(i % 10) && i)
+			{
 
-							}
+				printf("\n");
 
-						        if (!(i % 10) && i)
+			}
 
-								        {
+			printf("0x%02x", buffer[i]);
 
-										printf("\n");
+			i++;
 
-									}
-
-							       			 printf("0x%02x", buffer[i]);
-
-								      		 i++;
-
-									 }
-
-		        printf("\n");
+			}
+					printf("\n");
 
 }
 
@@ -57,29 +53,25 @@ void simple_print_buffer(char *buffer, unsigned int size)
  */
 
 int main(void)
-
 {
 
-	    char *buffer;
+	char *buffer;
 
+	buffer = create_array(98, 'H');
 
+	if  (buffer == NULL)
+	{
 
-	        buffer = create_array(98, 'H');
+		printf("failed to allocate memory\n");
 
-		    if  (buffer == NULL)
+		return (1);
 
-			        {
+	}
 
-					        printf("failed to allocate memory\n");
+	simple_print_buffer(buffer, 98);
 
-						        return (1);
+	free(buffer);
 
-							    }
-
-		        simple_print_buffer(buffer, 98);
-
-			    free(buffer);
-
-			        return (0);
+	return (0);
 
 }
