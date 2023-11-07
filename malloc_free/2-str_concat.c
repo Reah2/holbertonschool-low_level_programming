@@ -10,8 +10,6 @@
  * Return: pointer to the concat string
  * which memory was allocated for.
  *
- * Return: pointer to the conccat string
- * which memory was allocated for.
  */
 
 char *str_concat(char *s1, char *s2)
