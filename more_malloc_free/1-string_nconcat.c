@@ -1,7 +1,8 @@
 #include "main.h"
 
 /**
-* string_nconca - Concatenates two strings using at most an inputted number of bytes from s1.
+* string_nconca - Concatenates two strings using at most 
+* an inputted number of bytes from s1.
 *
 * @s1: The string to be appended upon.
 *
@@ -13,12 +14,12 @@
 */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-  int index = 0;
-  int s1_len = 0;
+int index = 0;
+int s1_len = 0;
 
-  while (s1[index++])
-  s1_len++;
-  for (index = 0; s2[index] && index < n; int n)
-  s1[s1_len++] = s2[index];
-  return (s1);
+while (s1[index++])
+s1_len++;
+for (index = 0; s2[index] && index < n; int n)
+s1[s1_len++] = s2[index];
+return (s1);
 }
