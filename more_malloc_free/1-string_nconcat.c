@@ -19,7 +19,7 @@ int s1_len = 0;
 
 while (s1[index++])
 s1_len++;
-for (index = 0; s2[index] && index < n; int n)
+for (index = 0; s2[index] && index < n; index++)
 s1[s1_len++] = s2[index];
 return (s1);
 }
