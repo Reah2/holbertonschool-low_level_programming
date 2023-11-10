@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
-* string_nconca - Concatenates two strings using at most 
+* string_nconca - Concatenates two strings using at most
 * an inputted number of bytes from s1.
 *
 * @s1: The string to be appended upon.
