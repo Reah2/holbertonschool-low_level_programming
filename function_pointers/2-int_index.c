@@ -1,26 +1,25 @@
-#include "function_pointers.h"
+#include "main.h"
 
 /**
- * int_index - searcc for an integer
- * @array: target array holding int
- * @size: array size
- * @cmp: function pointer to compare search int
+ * int_index - iterate over an array
+ * @array: array of integers
+ * @size: size of array
+ * @cmp: function to execute on the array
  *
- * Return: int element match, -1 if size <= 0
- *
+ * Return: index
  */
-
 int int_index(int *array, int size, int (*cmp)(int))
 {
-	int i;
-
-	if (array == NULL || cmp == NULL)
-		return (-1);
-
-	for (i = 0; i < size; i++)
-	{
-		if (cmp(array[i]) != 0)
-			return (1);
-	}
-	return (-1);
+int index;
+index = size;
+if (size <= 0)
+return (-1);
+if (!array || !cmp)
+return (-1);
+while (size--)
+{
+if (cmp(array[index - size]))
+return (index - size);
+}
+return (-1);
 }
