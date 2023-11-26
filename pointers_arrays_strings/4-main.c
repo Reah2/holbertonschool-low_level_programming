@@ -1,15 +1,39 @@
 #include "main.h"
 
-/**
- * main - check the code
- *
- * Return: Always 0.
- */
-int main(void)
-{
-    char *str;
 
-    str = "I do not fear computers. I fear the lack of them - Isaac Asimov";
-    print_rev(str);
-    return (0);
+/**
+ * reverse_array - Funtion that revers the content of arrays integers
+ *
+ * @a: The array to reverse
+ *
+ * @n: Number of elements to reverse
+ *
+ * Return: reversed string
+ *
+ */
+
+void reverse_array(int *a, int n)
+
+{
+
+	int temp;
+
+	int i;
+
+	n--;
+
+	for (i = 0; i < n ; i++)
+
+	{
+
+		temp = a[i];
+
+		a[i] = a[n];
+
+		a[n] = temp;
+
+		n--;
+
+	}
+
 }
