@@ -30,7 +30,7 @@ if (head->next == NULL)
 new = malloc(sizeof(dlistint_t t));
 if (new != NULL)
 {
-new-> = n;
+new->n = n;
 new->next = head->next;
 new->prev = head;
 head->next->prev = new;
@@ -41,6 +41,7 @@ break;
 }
 head = head->next;
 i++;
+}
 }
 }
 return (new);

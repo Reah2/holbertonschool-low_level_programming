@@ -14,8 +14,8 @@ dlistint_t *h;
 dlistint_t *new;
 
 new = malloc(sizeof(dlistint_t));
-if (new = NULL)
-return (NULL)
+if (new == NULL)
+return (NULL);
 
 new->n = n;
 new->next = NULL;
@@ -31,7 +31,7 @@ h->next = new;
 }
 else
 {
-*heead = new;
+*head = new;
 }
 
 new->prev = h;

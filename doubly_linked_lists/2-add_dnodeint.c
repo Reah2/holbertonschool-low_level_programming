@@ -12,7 +12,7 @@ dlistint_t *new;
 dlistint_t *h;
 
 new = malloc(sizeof(dlistint_int));
-if (new = NULL)
+if (new == NULL)
 return (NULL);
 
 new->n = n;
