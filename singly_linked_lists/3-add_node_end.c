@@ -22,7 +22,7 @@ list_t *temp = *head;
 
 unsigned int len = 0;
 
-while(str[len])
+while (str[len])
 
 len++;
 
