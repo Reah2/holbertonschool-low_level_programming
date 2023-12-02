@@ -19,7 +19,7 @@ h = h->prev;
 
 while (h != NULL)
 {
-printf("%d/n", h->n);
+printf("%d\n", h->n);
 count++;
 h = h->next;
 }
