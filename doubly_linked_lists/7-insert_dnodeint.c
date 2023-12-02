@@ -22,7 +22,7 @@ i = 1;
 if (head != NULL)
 while (head->prev != NULL)
 head = head->prev;
- while (head != NULL)
+while (head != NULL)
 {
 if (i != idx)
 {
