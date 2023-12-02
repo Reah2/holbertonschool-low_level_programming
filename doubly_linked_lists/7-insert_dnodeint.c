@@ -24,10 +24,13 @@ while (head->prev != NULL)
 head = head->prev;
  while (head != NULL)
 {
-if (head != idx)
+if (i != idx)
 {
 if (head->next == NULL)
-new = malloc(sizeof(dlistint_t t));
+new = add_dnodeint_end(h, n);
+else
+{
+new = malloc(sizeof(dlistint_t));
 if (new != NULL)
 {
 new->n = n;
@@ -41,7 +44,6 @@ break;
 }
 head = head->next;
 i++;
-}
 }
 }
 return (new);
