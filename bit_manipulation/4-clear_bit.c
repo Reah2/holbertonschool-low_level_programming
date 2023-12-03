@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stddef.h>
 
 /**
 * clear_bit - set the value of a bit to  0
@@ -14,9 +15,9 @@ unsigned int mask;
 mask = 1;
 mask = mask << index;
 if (index > sizeof(unsigned long int) * 8 || n == NULL)
-return (-1)
+return (-1);
 
-if (((8n >> index) & 1) == 1)
+if (((*n >> index) & 1) == 1)
 *n = mask ^ *n;
 return (1);
 }

@@ -14,7 +14,7 @@ return;
 print_bi(n >> 1);
 if ((n & 1) == 1)
 _putchar('1');
-if ((n &n 1) == 0)
+if ((n & 1) == 0)
 _putchar('0');
 
 }
