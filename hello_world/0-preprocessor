@@ -1,0 +1,31 @@
+#!/bin/bash
+
+check if CFILE variable is set
+
+if [ -z "$CFILE" ]; then
+
+    echo "Error: CFILE variable is not set."
+
+    exit 1
+
+fi
+
+# Check if the C file exists
+
+if [ ! -f "$CFILE" ]; then
+
+    echo "Error: C file '$CFILE' not found."
+
+    exit 1
+
+fi
+
+# Define the output file
+
+OUTPUT_FILE="c"
+
+# Run the C file through the preprocessor and save the result
+
+cpp "$CFILE" -o "$OUTPUT_FILE"
+
+echo "Preprocessing complete. Output saved in '$OUTPUT_FILE'."

@@ -1,0 +1,43 @@
+#!/bin/bash
+
+# Get the C file name from the variable
+
+CFILE=$1
+
+
+
+# Check if the C file exists
+
+if [ ! -f "$CFILE" ]; then
+
+    echo "Error: File not found - $CFILE"
+
+    exit 1
+
+fi
+
+
+
+# Extract the base name of the C file without the extension
+
+BASE_NAME=$(basename -s .c "$CFILE")
+
+
+
+# Compile the C file without linking
+
+gcc -c "$CFILE" -o "${BASE_NAME}.o"
+
+
+
+# Check if the compilation was successful
+
+if [ $? -eq 0 ]; then
+
+    echo "Compilation successful. Object file: ${BASE_NAME}.o"
+
+else
+
+    echo "Compilation failed."
+
+fi
