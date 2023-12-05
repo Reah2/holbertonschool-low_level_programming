@@ -1,2 +1,2 @@
-CFILE="main.c"
+#!/bin/bash
 gcc -c $CFILE
