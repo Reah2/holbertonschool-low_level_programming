@@ -1,4 +1,4 @@
-#include "holberton.h"
+#include "main.h"
 /**
 * print_line - prints a line and characters long
 * @n: length of line
