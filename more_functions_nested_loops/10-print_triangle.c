@@ -1,31 +1,44 @@
 #include "main.h"
+
 /**
-* print_triangle - prints a triangle of size*size
-* @size: size of triangle
-*
-* Return: void
-*/
+ * print_triangle - print triangle at given size
+ * @size: size of a triangle
+ *
+ */
 void print_triangle(int size)
 {
-int i, j, space;
-
+/*
+ * int i: used to subtract
+ *
+ * int margin: will record the amount of white space
+ * int dis"tance": is used to offset size
+ * int to_print: tell how many '#' will need to print per line
+ */
+int i, margin, dis;
+int to_print;
 if (size <= 0)
 {
 _putchar('\n');
+return;
 }
-else
+dis = size - 1;
+for (i = 0 ; i < size ; i++)
 {
-for (i = 1; i <= size; i++)
+/*
+ * we se the margin to zero
+ */
+margin = 0;
+while (margin < (dis - i))
 {
-for (space = 1; space <= (size - 1); space++)
-{
-_putchar(' ');
+_putchar(32);
+margin++;
 }
-for (j = 1; j <= i; j++)
+to_print = size - margin;
+while (to_print > 0)
 {
 _putchar('#');
+to_print--;
 }
 _putchar('\n');
-}
 }
 }
